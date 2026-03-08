@@ -1,25 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Web Pro</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Mi Página</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg,#1e3c72,#2a5298);
+    color:white;
+    text-align:center;
+}
+
+header{
+    padding:40px;
+}
+
+h1{
+    font-size:40px;
+}
+
+.contenedor{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+}
+
+.tarjeta{
+    background:white;
+    color:black;
+    border-radius:15px;
+    padding:20px;
+    width:250px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.tarjeta:hover{
+    transform:scale(1.05);
+}
+
+.tarjeta img{
+    width:100%;
+    border-radius:10px;
+}
+
+button{
+    margin-top:10px;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    background:#2a5298;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1e3c72;
+}
+
+#mensaje{
+    margin-top:30px;
+    font-size:22px;
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Mi Increíble Página</h1>
-        <p>Bienvenido a mi rincón en el internet.</p>
-    </header>
+<header>
+<h1>Hola, ¿cómo estás?</h1>
+<p>Bienvenido a mi página</p>
+</header>
 
-    <main>
-        <section class="contenido">
-            <h2>Sobre mí</h2>
-            <p>Estoy aprendiendo a programar y este es mi primer gran paso.</p>
-            <button>¡Salúdame!</button>
-        </section>
-    </main>
+<div class="contenedor">
+
+<div class="tarjeta">
+<img src="https://picsum.photos/300/200?random=1">
+<h3>Me caes bien</h3>
+<button onclick="mensaje1()">Presiona aquí</button>
+</div>
+
+<div class="tarjeta">
+<img src="https://picsum.photos/300/200?random=2">
+<h3>Eres buena onda</h3>
+<button onclick="mensaje2()">Presiona aquí</button>
+</div>
+
+</div>
+
+<div id="mensaje"></div>
+
+<script>
+function mensaje1(){
+document.getElementById("mensaje").innerText="Gracias por visitar la página.";
+}
+
+function mensaje2(){
+document.getElementById("mensaje").innerText="Que tengas un excelente día.";
+}
+</script>
 
 </body>
 </html>
