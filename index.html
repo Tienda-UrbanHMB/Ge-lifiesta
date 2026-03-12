@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ge'lifiesta | Gelatinas Gourmet de Diseño</title>
     
-    <!-- Favicon mejorado con fallback -->
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="shortcut icon" href="logo.png" type="image/png">
-    
-    <!-- Preconexión para fuentes (mejora rendimiento) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuente Poppins desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -31,7 +23,7 @@
             overflow-x: hidden;
         }
 
-        /* Fondo con partículas brillantes - Optimizado */
+        /* Fondo con partículas brillantes */
         .fondo-brillante {
             position: fixed;
             top: 0;
@@ -45,7 +37,6 @@
             opacity: 0.8;
             z-index: -2;
             animation: brilloPulsante 8s ease-in-out infinite;
-            will-change: opacity;
         }
 
         @keyframes brilloPulsante {
@@ -53,7 +44,7 @@
             50% { opacity: 1; }
         }
 
-        /* TEXTO MÓVIL EN EL FONDO */
+        /* TEXTO MÓVIL EN EL FONDO - AHORA CON NUEVAS ANIMACIONES */
         .fondo-movil {
             position: fixed;
             top: 0;
@@ -81,9 +72,9 @@
             text-shadow: 0 0 30px #ff4080, 0 0 60px #ff85c1;
             font-family: 'Arial Black', 'Impact', sans-serif;
             opacity: 0.9;
-            will-change: transform;
         }
 
+        /* Efecto neón para cada línea - AHORA CON ANIMACIÓN EXTRA DE COLOR */
         .texto-vertical:nth-child(1) {
             top: 5%;
             left: -5%;
@@ -91,6 +82,12 @@
             font-size: 14vw;
             -webkit-text-stroke: 4px #ff1493;
             text-shadow: 0 0 40px #ff1493, 0 0 80px #ff69b4;
+            animation: moverVertical 25s linear infinite, cambioColor1 5s ease-in-out infinite;
+        }
+
+        @keyframes cambioColor1 {
+            0%, 100% { -webkit-text-stroke-color: #ff1493; text-shadow: 0 0 40px #ff1493, 0 0 80px #ff69b4; }
+            50% { -webkit-text-stroke-color: #ff69b4; text-shadow: 0 0 40px #ff69b4, 0 0 80px #ff1493; }
         }
 
         .texto-vertical:nth-child(2) {
@@ -101,6 +98,12 @@
             -webkit-text-stroke: 4px #ff4080;
             text-shadow: 0 0 50px #ff4080, 0 0 100px #ff69a5;
             opacity: 0.8;
+            animation: moverVertical 25s linear infinite -5s, cambioColor2 6s ease-in-out infinite;
+        }
+
+        @keyframes cambioColor2 {
+            0%, 100% { -webkit-text-stroke-color: #ff4080; text-shadow: 0 0 50px #ff4080, 0 0 100px #ff69a5; }
+            50% { -webkit-text-stroke-color: #ff69a5; text-shadow: 0 0 50px #ff69a5, 0 0 100px #ff4080; }
         }
 
         .texto-vertical:nth-child(3) {
@@ -110,6 +113,12 @@
             font-size: 18vw;
             -webkit-text-stroke: 5px #ff69b4;
             text-shadow: 0 0 60px #ff69b4, 0 0 120px #ff85c1;
+            animation: moverVertical 25s linear infinite -10s, cambioColor3 7s ease-in-out infinite;
+        }
+
+        @keyframes cambioColor3 {
+            0%, 100% { -webkit-text-stroke-color: #ff69b4; text-shadow: 0 0 60px #ff69b4, 0 0 120px #ff85c1; }
+            50% { -webkit-text-stroke-color: #ff85c1; text-shadow: 0 0 60px #ff85c1, 0 0 120px #ff69b4; }
         }
 
         .texto-vertical:nth-child(4) {
@@ -119,6 +128,12 @@
             font-size: 20vw;
             -webkit-text-stroke: 5px #ff34b3;
             text-shadow: 0 0 70px #ff34b3, 0 0 140px #ff1493;
+            animation: moverVertical 25s linear infinite -15s, cambioColor4 8s ease-in-out infinite;
+        }
+
+        @keyframes cambioColor4 {
+            0%, 100% { -webkit-text-stroke-color: #ff34b3; text-shadow: 0 0 70px #ff34b3, 0 0 140px #ff1493; }
+            50% { -webkit-text-stroke-color: #ff1493; text-shadow: 0 0 70px #ff1493, 0 0 140px #ff34b3; }
         }
 
         .texto-vertical:nth-child(5) {
@@ -128,6 +143,12 @@
             font-size: 22vw;
             -webkit-text-stroke: 6px #ff00aa;
             text-shadow: 0 0 80px #ff00aa, 0 0 160px #ff69a5;
+            animation: moverVertical 25s linear infinite -7s, cambioColor5 4s ease-in-out infinite;
+        }
+
+        @keyframes cambioColor5 {
+            0%, 100% { -webkit-text-stroke-color: #ff00aa; text-shadow: 0 0 80px #ff00aa, 0 0 160px #ff69a5; }
+            50% { -webkit-text-stroke-color: #ff69a5; text-shadow: 0 0 80px #ff69a5, 0 0 160px #ff00aa; }
         }
 
         .texto-vertical:nth-child(6) {
@@ -137,6 +158,12 @@
             font-size: 15vw;
             -webkit-text-stroke: 4px #ff75c0;
             text-shadow: 0 0 45px #ff75c0, 0 0 90px #ff1493;
+            animation: moverVertical 25s linear infinite -3s, cambioColor6 5.5s ease-in-out infinite;
+        }
+
+        @keyframes cambioColor6 {
+            0%, 100% { -webkit-text-stroke-color: #ff75c0; text-shadow: 0 0 45px #ff75c0, 0 0 90px #ff1493; }
+            50% { -webkit-text-stroke-color: #ff1493; text-shadow: 0 0 45px #ff1493, 0 0 90px #ff75c0; }
         }
 
         @keyframes moverVertical {
@@ -148,51 +175,42 @@
             }
         }
 
-        /* Header con animaciones mejoradas */
+        /* Header con nuevas animaciones de entrada */
         .modern-header {
-            background: linear-gradient(145deg, rgba(255, 105, 165, 0.98) 0%, rgba(255, 64, 128, 0.98) 100%);
-            padding: 4.5rem 1.5rem;
+            background: linear-gradient(145deg, rgba(255, 105, 165, 0.95) 0%, rgba(255, 64, 128, 0.95) 100%);
+            padding: 4rem 1.5rem;
             text-align: center;
             color: white;
             position: relative;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(255, 64, 128, 0.5);
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
             backdrop-filter: blur(5px);
             border-bottom: 4px solid #ffffff30;
-            animation: headerEntrada 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: headerGlow 3s ease-in-out infinite;
         }
 
-        @keyframes headerEntrada {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.95);
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            }
+        @keyframes headerGlow {
+            0%, 100% { box-shadow: 0 20px 40px rgba(255, 64, 128, 0.5); }
+            50% { box-shadow: 0 30px 60px rgba(255, 64, 128, 0.8), 0 0 40px #ff69a5; }
         }
 
         .modern-header::before {
             content: "✦ ✦ ✦";
             font-size: 20rem;
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.2);
             position: absolute;
             top: -80px;
             right: -50px;
             transform: rotate(20deg);
             font-family: serif;
             white-space: nowrap;
-            line-height: 1;
-            animation: destellos 4s ease-in-out infinite;
+            animation: girarEstrellas 15s linear infinite;
         }
 
-        @keyframes destellos {
-            0%, 100% { opacity: 0.15; transform: rotate(20deg) scale(1); }
-            50% { opacity: 0.3; transform: rotate(20deg) scale(1.05); }
+        @keyframes girarEstrellas {
+            0% { transform: rotate(20deg); }
+            100% { transform: rotate(380deg); }
         }
 
         .logo-text {
@@ -203,15 +221,14 @@
             letter-spacing: -1px;
             position: relative;
             display: inline-block;
-            animation: fadeInDown 1s ease, float 6s ease-in-out infinite 1s;
+            animation: fadeInDown 1s ease, flotar 4s ease-in-out infinite;
             background: linear-gradient(135deg, #ffffff, #ffe6f0);
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 20px #ff69b4;
         }
 
-        @keyframes float {
+        @keyframes flotar {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
@@ -222,27 +239,20 @@
             font-weight: 300;
             letter-spacing: 8px;
             text-shadow: 2px 2px 0 #b32e5a;
-            color: #ffffff;
-            background: none;
             -webkit-text-fill-color: white;
-            animation: fadeInUp 1s ease 0.2s both;
+            background: none;
+            animation: aparecer 1.5s ease;
+        }
+
+        @keyframes aparecer {
+            0% { opacity: 0; letter-spacing: 20px; }
+            100% { opacity: 1; letter-spacing: 8px; }
         }
 
         @keyframes fadeInDown {
             from {
                 opacity: 0;
                 transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -264,18 +274,12 @@
             border-radius: 50px;
             backdrop-filter: blur(5px);
             border: 2px solid #ffffff50;
-            animation: fadeInScale 1s ease 0.4s both;
+            animation: latido 3s ease-in-out infinite;
         }
 
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); background: rgba(0,0,0,0.3); }
         }
 
         .container {
@@ -286,7 +290,7 @@
             z-index: 2;
         }
 
-        /* Servicios con animaciones */
+        /* Servicios con efecto vidrio neón - NUEVAS ANIMACIONES */
         .servicios-modernos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -302,23 +306,28 @@
             text-align: center;
             box-shadow: 0 25px 50px rgba(255, 64, 128, 0.4), inset 0 0 30px #ff69a5;
             border: 2px solid #ff69a5;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            animation: aparecer 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+            animation: entradaTarjetas 1s ease;
         }
 
-        .card-moderna:nth-child(1) { animation-delay: 0.2s; }
-        .card-moderna:nth-child(2) { animation-delay: 0.4s; }
+        .card-moderna:nth-child(1) {
+            animation-delay: 0.2s;
+        }
 
-        @keyframes aparecer {
+        .card-moderna:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes entradaTarjetas {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateX(-50px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
             }
         }
 
@@ -341,13 +350,14 @@
             border-color: #ffffff;
         }
 
-        .card-moderna:hover .highlight-moderno {
-            animation: brilloBoton 1s ease;
+        .card-moderna:hover::before {
+            opacity: 0.4;
+            animation: pulsarFondo 1s ease infinite;
         }
 
-        @keyframes brilloBoton {
-            0%, 100% { box-shadow: 0 15px 30px #ff1493, 0 0 30px #ffffff80; }
-            50% { box-shadow: 0 20px 40px #ff1493, 0 0 60px #ffffff; }
+        @keyframes pulsarFondo {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.6; }
         }
 
         .card-moderna h3 {
@@ -375,39 +385,21 @@
             box-shadow: 0 15px 30px #ff1493, 0 0 30px #ffffff80;
             border: 2px solid white;
             font-size: 1.2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            animation: brilloHighlight 2s ease-in-out infinite;
+            transition: all 0.3s ease;
         }
 
-        .highlight-moderno::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to right,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0.3) 50%,
-                rgba(255,255,255,0) 100%
-            );
-            transform: rotate(25deg);
-            animation: barrido 3s infinite;
-        }
-
-        @keyframes barrido {
-            0% { transform: rotate(25deg) translateX(-100%); }
-            20%, 100% { transform: rotate(25deg) translateX(100%); }
+        @keyframes brilloHighlight {
+            0%, 100% { box-shadow: 0 15px 30px #ff1493, 0 0 30px #ffffff80; }
+            50% { box-shadow: 0 20px 40px #ff1493, 0 0 50px #ffffff; }
         }
 
         .highlight-moderno:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px #ff1493, 0 0 40px #ffffff;
+            transform: scale(1.1);
+            animation: none;
         }
 
-        /* Títulos de sección con animaciones */
+        /* Títulos de sección con neón - NUEVAS ANIMACIONES */
         .titulo-seccion {
             text-align: center;
             font-size: 3.5rem;
@@ -416,20 +408,12 @@
             font-weight: 800;
             text-shadow: 0 0 20px #ff69a5, 0 0 40px #ff4080, 4px 4px 0 #b32e5a;
             position: relative;
-            animation: tituloEntrada 1s ease;
+            animation: resplandorTitulo 3s ease-in-out infinite;
         }
 
-        @keyframes tituloEntrada {
-            from {
-                opacity: 0;
-                transform: translateY(-30px) scale(0.9);
-                text-shadow: 0 0 0 #ff69a5, 0 0 0 #ff4080, 4px 4px 0 #b32e5a;
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                text-shadow: 0 0 20px #ff69a5, 0 0 40px #ff4080, 4px 4px 0 #b32e5a;
-            }
+        @keyframes resplandorTitulo {
+            0%, 100% { text-shadow: 0 0 20px #ff69a5, 0 0 40px #ff4080, 4px 4px 0 #b32e5a; }
+            50% { text-shadow: 0 0 40px #ff69a5, 0 0 80px #ff4080, 4px 4px 0 #b32e5a; }
         }
 
         .titulo-seccion::after {
@@ -440,13 +424,12 @@
             margin-top: 10px;
             text-shadow: 0 0 20px #ffffff;
             letter-spacing: 10px;
-            animation: girarEstrellas 4s linear infinite;
+            animation: girarEstrellasTitulo 10s linear infinite;
         }
 
-        @keyframes girarEstrellas {
-            0% { transform: rotate(0deg); opacity: 0.8; }
-            50% { transform: rotate(180deg); opacity: 1; }
-            100% { transform: rotate(360deg); opacity: 0.8; }
+        @keyframes girarEstrellasTitulo {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .subtitulo-seccion {
@@ -465,16 +448,13 @@
             margin-right: auto;
             backdrop-filter: blur(5px);
             border: 2px solid #ffffff50;
-            width: fit-content;
-            animation: subtituloEntrada 1s ease 0.3s both;
-            position: relative;
-            overflow: hidden;
+            animation: deslizarSubtitulo 1s ease, parpadeoBorde 2s ease-in-out infinite;
         }
 
-        @keyframes subtituloEntrada {
+        @keyframes deslizarSubtitulo {
             from {
                 opacity: 0;
-                transform: translateX(-50px);
+                transform: translateX(50px);
             }
             to {
                 opacity: 1;
@@ -482,23 +462,12 @@
             }
         }
 
-        .subtitulo-seccion::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: barridoSubtitulo 3s infinite;
+        @keyframes parpadeoBorde {
+            0%, 100% { border-color: #ffffff50; }
+            50% { border-color: #ff85c1; }
         }
 
-        @keyframes barridoSubtitulo {
-            0% { left: -100%; }
-            20%, 100% { left: 100%; }
-        }
-
-        /* Galería con animaciones */
+        /* Galería con efecto brillante - NUEVAS ANIMACIONES */
         .galeria-grid-moderna {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -513,23 +482,31 @@
             overflow: hidden;
             box-shadow: 0 30px 50px rgba(255, 64, 128, 0.5), inset 0 0 30px #ffffff30;
             border: 2px solid #ff85c1;
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease, border-color 0.5s ease;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            animation: aparecerTarjeta 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+            animation: subirTarjetas 1s ease;
         }
 
-        .foto-cliente-moderna:nth-child(1) { animation-delay: 0.1s; }
-        .foto-cliente-moderna:nth-child(2) { animation-delay: 0.3s; }
-        .foto-cliente-moderna:nth-child(3) { animation-delay: 0.5s; }
+        .foto-cliente-moderna:nth-child(1) {
+            animation-delay: 0.1s;
+        }
 
-        @keyframes aparecerTarjeta {
+        .foto-cliente-moderna:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .foto-cliente-moderna:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes subirTarjetas {
             from {
                 opacity: 0;
-                transform: scale(0.9) translateY(30px);
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
-                transform: scale(1) translateY(0);
+                transform: translateY(0);
             }
         }
 
@@ -550,9 +527,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease, filter 0.8s ease;
+            transition: transform 0.8s ease;
             filter: brightness(1.1) contrast(1.1);
-            display: block;
         }
 
         .foto-cliente-moderna:hover img {
@@ -575,7 +551,7 @@
         }
 
         .foto-cliente-moderna:hover h4 {
-            text-shadow: 0 0 25px #ff69a5, 0 0 40px #ff69a5;
+            text-shadow: 0 0 30px #ff69a5;
         }
 
         .p-desc-moderna {
@@ -593,12 +569,12 @@
             content: "✨";
             font-size: 1.5rem;
             filter: drop-shadow(0 0 10px gold);
-            animation: girarEstrella 3s ease-in-out infinite;
+            animation: girarEstrella 3s linear infinite;
         }
 
         @keyframes girarEstrella {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.2); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .testimonio-moderno {
@@ -615,23 +591,11 @@
             backdrop-filter: blur(5px);
             border: 1px solid #ffffff50;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .testimonio-moderno:hover {
             transform: translateX(5px);
-            box-shadow: inset 0 0 40px #ff69a5, 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .testimonio-moderno::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 10px;
-            font-size: 5rem;
-            color: rgba(255,255,255,0.1);
-            font-family: serif;
+            box-shadow: inset 0 0 40px #ff69a5;
         }
 
         .testimonio-moderno b {
@@ -643,22 +607,21 @@
             border-radius: 30px;
             display: inline-block;
             margin-top: 5px;
-            font-weight: 600;
-            transition: background 0.3s ease, transform 0.3s ease;
+            animation: brilloNombre 2s ease-in-out infinite;
         }
 
-        .testimonio-moderno:hover b {
-            background: #ff4080;
-            transform: scale(1.05);
+        @keyframes brilloNombre {
+            0%, 100% { background: #ff1493; }
+            50% { background: #ff4080; }
         }
 
-        /* Contacto con animaciones */
+        /* Contacto ultra llamativo - NUEVAS ANIMACIONES */
         .contacto-moderno {
             margin-top: 80px;
             text-align: center;
             background: linear-gradient(135deg, #ff1493, #ff4080, #ff69a5);
             background-size: 300% 300%;
-            animation: gradientMove 5s ease infinite, aparecer 1s ease 0.6s both;
+            animation: gradientMove 5s ease infinite, latidoContacto 2s ease-in-out infinite;
             color: white;
             padding: 70px 40px;
             border-radius: 70px 70px 40px 40px;
@@ -666,6 +629,11 @@
             position: relative;
             overflow: hidden;
             border: 4px solid #ffffff80;
+        }
+
+        @keyframes latidoContacto {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
         }
 
         @keyframes gradientMove {
@@ -685,8 +653,7 @@
             white-space: nowrap;
             color: #ffffff;
             text-shadow: 0 0 30px #ffffff;
-            line-height: 1;
-            animation: flotarIconos 8s ease-in-out infinite;
+            animation: flotarIconos 6s ease-in-out infinite;
         }
 
         @keyframes flotarIconos {
@@ -700,12 +667,13 @@
             font-weight: 800;
             text-shadow: 5px 5px 0 #b32e5a, 0 0 50px #ffffff;
             position: relative;
-            animation: latido 2s ease-in-out infinite;
+            animation: vibrar 0.5s ease-in-out infinite;
         }
 
-        @keyframes latido {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        @keyframes vibrar {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(1deg); }
+            75% { transform: rotate(-1deg); }
         }
 
         .whatsapp-btn-moderno {
@@ -719,47 +687,23 @@
             display: inline-block;
             margin-top: 30px;
             box-shadow: 0 30px 50px rgba(37, 211, 102, 0.6), 0 0 60px #25d366;
-            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+            transition: all 0.4s ease;
             border: 4px solid white;
             letter-spacing: 2px;
             position: relative;
             z-index: 2;
             animation: pulse 2s infinite;
-            line-height: 1.2;
-            overflow: hidden;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 30px 50px rgba(37, 211, 102, 0.6), 0 0 60px #25d366; }
+            0% { transform: scale(1); }
             50% { transform: scale(1.05); box-shadow: 0 40px 70px #25d366, 0 0 100px #25d366; }
-            100% { transform: scale(1); box-shadow: 0 30px 50px rgba(37, 211, 102, 0.6), 0 0 60px #25d366; }
-        }
-
-        .whatsapp-btn-moderno::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to right,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0.3) 50%,
-                rgba(255,255,255,0) 100%
-            );
-            transform: rotate(25deg);
-            animation: barridoWhatsapp 4s infinite;
-        }
-
-        @keyframes barridoWhatsapp {
-            0% { transform: rotate(25deg) translateX(-100%); }
-            20%, 100% { transform: rotate(25deg) translateX(200%); }
+            100% { transform: scale(1); }
         }
 
         .whatsapp-btn-moderno:hover {
             background: #20b859;
-            transform: scale(1.1) !important;
+            transform: scale(1.1);
             box-shadow: 0 50px 80px #20b859, 0 0 150px #20b859;
             animation: none;
         }
@@ -769,17 +713,15 @@
             font-size: 2.5rem;
             vertical-align: middle;
             filter: drop-shadow(0 0 10px white);
-            display: inline-block;
-            font-style: normal;
-            animation: vibrar 1s ease-in-out infinite;
+            animation: saltar 1s ease infinite;
         }
 
-        @keyframes vibrar {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(10deg); }
-            75% { transform: rotate(-10deg); }
+        @keyframes saltar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
+        /* Pie de página - NUEVAS ANIMACIONES */
         .footer-text {
             text-align: center;
             padding: 30px;
@@ -794,17 +736,12 @@
             margin-top: 40px;
             border-radius: 60px;
             border: 2px solid #ffffff30;
-            animation: aparecer 1s ease 1s both;
-            overflow: hidden;
-        }
-
-        .footer-text:hover {
-            animation: brilloFooter 2s infinite;
+            animation: brilloFooter 3s ease-in-out infinite;
         }
 
         @keyframes brilloFooter {
             0%, 100% { background: rgba(255,64,128,0.2); }
-            50% { background: rgba(255,64,128,0.4); }
+            50% { background: rgba(255,64,128,0.4); border-color: #ff85c1; }
         }
 
         /* Responsive */
@@ -815,7 +752,6 @@
             
             .logo-text span {
                 font-size: 1.8rem;
-                letter-spacing: 4px;
             }
             
             .titulo-seccion {
@@ -824,7 +760,6 @@
             
             .subtitulo-seccion {
                 font-size: 1.2rem;
-                padding: 8px 20px;
             }
             
             .imagen-wrapper {
@@ -843,7 +778,6 @@
             .texto-vertical {
                 font-size: 18vw;
                 -webkit-text-stroke: 2px #ff69a5;
-                letter-spacing: 10px;
             }
         }
 
@@ -858,20 +792,7 @@
 
             .texto-vertical {
                 font-size: 22vw;
-                letter-spacing: 5px;
-            }
-
-            .contacto-moderno {
-                padding: 50px 20px;
-            }
-            
-            .whatsapp-btn-moderno {
-                padding: 15px 30px;
-                font-size: 1.3rem;
-            }
-            
-            .whatsapp-btn-moderno i {
-                font-size: 1.8rem;
+                letter-spacing: 10px;
             }
         }
     </style>
@@ -879,45 +800,72 @@
 <body>
 
 <!-- Fondo brillante -->
-<div class="fondo-brillante" role="presentation" aria-hidden="true"></div>
+<div class="fondo-brillante"></div>
 
-<!-- TEXTO MÓVIL EN EL FONDO -->
-<div class="fondo-movil" role="presentation" aria-hidden="true">
-    <div class="texto-vertical" aria-hidden="true">✦ Ge'lifiesta ✦</div>
-    <div class="texto-vertical" aria-hidden="true">✦ Ge'lifiesta ✦</div>
-    <div class="texto-vertical" aria-hidden="true">✦ Ge'lifiesta ✦</div>
-    <div class="texto-vertical" aria-hidden="true">✦ Ge'lifiesta ✦</div>
-    <div class="texto-vertical" aria-hidden="true">✦ Ge'lifiesta ✦</div>
-    <div class="texto-vertical" aria-hidden="true">✦ Ge'lifiesta ✦</div>
+<!-- TEXTO MÓVIL EN EL FONDO - AHORA SÚPER VISIBLE -->
+<div class="fondo-movil">
+    <div class="texto-vertical">✦ Ge'lifiesta ✦</div>
+    <div class="texto-vertical">✦ Ge'lifiesta ✦</div>
+    <div class="texto-vertical">✦ Ge'lifiesta ✦</div>
+    <div class="texto-vertical">✦ Ge'lifiesta ✦</div>
+    <div class="texto-vertical">✦ Ge'lifiesta ✦</div>
+    <div class="texto-vertical">✦ Ge'lifiesta ✦</div>
 </div>
 
-<header class="modern-header" role="banner">
+<header class="modern-header">
     <h1 class="logo-text">Ge'lifiesta<span>Gourmet</span></h1>
     <p class="tagline">Gelatina Gourmet & Repostería de Diseño</p>
 </header>
 
-<main id="main-content" class="container" role="main">
+<div class="container">
     <!-- Servicios -->
-    <section class="servicios-modernos" aria-label="Servicios destacados">
-        <article class="card-moderna">
+    <div class="servicios-modernos">
+        <div class="card-moderna">
             <h3>🎨 Impresiones Comestibles</h3>
             <p>Personaliza tus creaciones con nuestras impresiones de alta calidad.</p>
             <p><span class="highlight-moderno">Opciones: Hoja de Arroz y Azúcar</span></p>
-        </article>
-        <article class="card-moderna">
+        </div>
+        <div class="card-moderna">
             <h3>🍰 Gelatinas Gourmet</h3>
             <p>Elaboradas con ingredientes premium y diseños únicos.</p>
             <p><span class="highlight-moderno">Temática: ¡Cualquier personaje!</span></p>
-        </article>
-    </section>
+        </div>
+    </div>
 
     <!-- Títulos de Galería -->
     <h2 class="titulo-seccion">Diseños personalizados que encantan</h2>
     <p class="subtitulo-seccion">Nuestros trabajos más recientes</p>
     
     <!-- Galería -->
-    <section class="galeria-grid-moderna" aria-label="Galería de trabajos recientes">
-        <article class="foto-cliente-moderna">
+    <div class="galeria-grid-moderna">
+        <div class="foto-cliente-moderna">
             <div class="imagen-wrapper">
-                <img src="image_1.png" alt="Gelatina de Snoopy para 18 cumpleaños, con diseño de homenaje." loading="lazy">
+                <img src="image_1.png" alt="Homenaje al 18 cumpleaños">
             </div>
+            <div class="info-cliente-moderna">
+                <h4>🎂 Homenaje al 18 cumpleaños</h4>
+                <p class="p-desc-moderna">Kit completo con gelatina central de Snoopy y paletas individuales a juego.</p>
+                <div class="testimonio-moderno">
+                    "¡La mesa de dulces quedó espectacular! La impresión es súper nítida y el sabor increíble. ¡Gracias!" - <b>Cumpleañera Feliz</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="foto-cliente-moderna">
+            <div class="imagen-wrapper">
+                <img src="image_2.png" alt="Aventura Saiyajin">
+            </div>
+            <div class="info-cliente-moderna">
+                <h4>⚡ Aventura Saiyajin para los 9 meses</h4>
+                <p class="p-desc-moderna">Diseño de Dragon Ball Z con gelatina de Goku y paletas 'Esferas del Dragón'.</p>
+                <div class="testimonio-moderno">
+                    "Buscábamos algo único y Ge'lifiesta superó las expectativas. ¡Las esferas del dragón fueron la sensación!" - <b>Papás de Thiago</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="foto-cliente-moderna">
+            <div class="imagen-wrapper">
+                <img src="image_3.png" alt="Magia en la Fiesta con Bluey">
+            </
+
